@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseUrl = '/api/'
+const baseUrl = '/api'
 
 /* Function that gets a Quote from the server */
 const getQuote = async () => {

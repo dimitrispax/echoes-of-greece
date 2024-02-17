@@ -1,3 +1,5 @@
+import React from 'react'
+
 interface NavbarProps {
   handleNewQuote: () => void
 }
@@ -5,7 +7,7 @@ interface NavbarProps {
 const Navbar = ({handleNewQuote}: NavbarProps): React.ReactElement => {
   return (
     <header>
-      <nav className='w-full h-12 flex items-center justify-between backdrop-grayscale border-dotted border-b-2'>
+      <nav className='w-full h-12 flex items-center justify-between backdrop-grayscale border-b'>
         <h2 className='p-3 text-xl md:text-2xl text-white font-theme select-none'>
           Echoes of Greece
         </h2>

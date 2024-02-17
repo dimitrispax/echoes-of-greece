@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import quoteService from './services/quote'
 import Navbar from './components/Navbar'
 import QuoteContainer from './components/QuoteContainer'
@@ -6,17 +6,28 @@ import Footer from './components/Footer'
 
 const COPYRIGHT = 'Dimitrios Paximadakis \u00A9 2024'
 
-const App = () => {
+const App = (): React.ReactElement => {
   const [quote, setQuote] = useState({quote: '', author: ''})
-  const [refresh, setRefresh] = useState(true)
 
   useEffect(() => {
-    quoteService.getQuote().then((initialQuote) => setQuote(initialQuote))
+    const fetchQuote = async () => {
+      try {
+        const initialQuote = await quoteService.getQuote()
+        setQuote(initialQuote)
+      } catch (e) {
+        console.log(e)
+      }
+    }
+    fetchQuote()
   }, [])
 
   const handleNewQuote = async () => {
-    await quoteService.getQuote().then((initialQuote) => setQuote(initialQuote))
-    setRefresh(!refresh)
+    try {
+      const newQuote = await quoteService.getQuote()
+      setQuote(newQuote)
+    } catch (e) {
+      console.log(e)
+    }
   }
 
   if (quote.quote !== '')
