@@ -20,12 +20,11 @@ const App = () => {
 
   if (quote.quote !== '')
     return (
-      <div className='h-dvh flex justify-center items-center'>
+      <div className='h-dvh flex flex-col bg-cover bg-center bg-background'>
         <Navbar HandleNewQuote={handleNewQuote} />
-        <Background />
-        <div className='absolute bg-wave-pattern bg-repeat-x h-20 w-20'></div>
-
-        <QuoteContainer Quote={quote} />
+        <div className='h-dvh flex flex-wrap justify-center'>
+          <QuoteContainer Quote={quote} />
+        </div>
       </div>
     )
   else return <></>
