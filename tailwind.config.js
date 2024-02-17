@@ -6,12 +6,13 @@ export default {
   ],
   theme: {
     fontFamily: {
-      custom: ['"Cormorant Garamond"', "sans-serif"],
+      theme: ['"Cormorant Garamond"', "sans-serif"],
+      copyright: ["'Fira Mono'", "monospace"]
       // Add more custom font families as needed
     },
     extend: {
       backgroundImage: {
-        'background': 'url("./src/assets/background.jpg")',
+        'background': 'url("/background.jpg")',
         
       }
     },
