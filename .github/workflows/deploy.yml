@@ -3,6 +3,10 @@ on:
   push:
     branches:
       - main
+
+env:
+  VITE_BASE_URL: ${{ secrets.VITE_BASE_URL }}
+
 jobs:
   build:
     name: Build
@@ -16,8 +20,6 @@ jobs:
         run: npm run lint
       - name: Build 🔨
         run: npm run build
-        env:
-          VITE_BASE_URL: ${{ secrets.VITE_BASE_URL }}
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:
