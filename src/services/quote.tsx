@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseUrl = 'https://greek-writers-quotes-api.onrender.com/api'
+const baseUrl = import.meta.env.VITE_BASE_URL
 
 /* Function that gets a Quote from the server */
 const getQuote = async () => {
