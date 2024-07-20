@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://greek-writers-quotes-api.onrender.com',
+        target: 'https://greek-writers-quotes-api.vercel.app',
         changeOrigin: true,
       },
     },

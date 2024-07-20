@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {copyContent} from '../helpers/helpers'
+import {copyContent} from '../utils/utils'
 interface QuoteContainerProps {
   quote: {
     quote: string
