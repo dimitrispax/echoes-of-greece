@@ -7,6 +7,8 @@ interface BackgroundImageProps {
 }
 
 const BackgroundImage = ({ index }: BackgroundImageProps): React.ReactElement => {
+
+  console.log('import.meta.env.VITE_CLOUD_NAME :>> ', import.meta.env.VITE_CLOUD_NAME);
   const cld = new Cloudinary({ cloud: { cloudName: import.meta.env.VITE_CLOUD_NAME } });
 
   const backgroundImageSrc = cld
