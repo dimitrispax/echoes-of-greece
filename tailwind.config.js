@@ -8,14 +8,7 @@ export default {
     fontFamily: {
       theme: ['"Cormorant Garamond"', "sans-serif"],
       copyright: ["'Fira Mono'", "monospace"]
-      // Add more custom font families as needed
-    },
-    extend: {
-      backgroundImage: {
-        'background': 'url("/background.jpg")',
-        
-      }
-    },
+    }
   },
   plugins: [],
 }
