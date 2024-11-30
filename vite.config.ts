@@ -1,16 +1,16 @@
-import {defineConfig} from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: 'https://dimitrispax.github.io/echoes-of-greece/',
+  base: "https://dimitrispax.github.io/echoes-of-greece/",
   server: {
     proxy: {
-      '/api': {
-        target: 'https://greek-writers-quotes-api.vercel.app',
+      "/api": {
+        target: "https://greek-writers-quotes-api.vercel.app",
         changeOrigin: true,
       },
     },
   },
-})
+});

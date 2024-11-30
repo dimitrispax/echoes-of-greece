@@ -1,12 +1,12 @@
-import copy from 'copy-to-clipboard'
+import copy from "copy-to-clipboard";
 
 export const copyContent = async (
-  quote: {quote: string; author: string},
-  setButtonText: React.Dispatch<React.SetStateAction<string>>
+  quote: { quote: string; author: string },
+  setButtonText: React.Dispatch<React.SetStateAction<string>>,
 ) => {
-  copy(`"${quote.quote}" - ${quote.author}`)
-  setButtonText('Copied')
+  copy(`"${quote.quote}" - ${quote.author}`);
+  setButtonText("Copied");
   setTimeout(() => {
-    setButtonText('Copy')
-  }, 1000)
-}
+    setButtonText("Copy");
+  }, 1000);
+};
