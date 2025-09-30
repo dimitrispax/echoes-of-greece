@@ -1,7 +1,7 @@
-import React from "react";
+import type React from "react"
 
 interface FooterProps {
-  copyright: string;
+  copyright: string
 }
 
 const Footer = ({ copyright }: FooterProps): React.ReactElement => {
@@ -19,7 +19,7 @@ const Footer = ({ copyright }: FooterProps): React.ReactElement => {
         </a>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

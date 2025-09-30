@@ -10,3 +10,6 @@ dist
 .eslintcache
 
 .env
+
+# macOS system files
+.DS_Store
