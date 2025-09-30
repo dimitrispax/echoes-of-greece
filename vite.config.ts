@@ -4,11 +4,11 @@ import { defineConfig } from "vite"
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "https://dimitrispax.github.io/echoes-of-greece/",
+  base: "/",
   server: {
     proxy: {
       "/api": {
-        target: "https://greek-writers-quotes-api.vercel.app",
+        target: "https://api.echoes-of-greece.gr",
         changeOrigin: true,
       },
     },
