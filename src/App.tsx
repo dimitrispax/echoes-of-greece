@@ -25,7 +25,7 @@ const App = (): React.ReactElement => {
   const fetchQuote = useCallback(async () => {
     try {
       const quote = await quoteService.getQuote()
-      
+
       setQuote(quote)
 
       setAnimateKey((prevKey) => prevKey + 1)
